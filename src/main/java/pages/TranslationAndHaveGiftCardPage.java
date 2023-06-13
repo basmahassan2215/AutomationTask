@@ -30,9 +30,10 @@ public class TranslationAndHaveGiftCardPage extends  PageBase{
         clickButton(TranslationButton);
     }
 
-    public void ToHaveGiftCode ()
+    public void HaveGiftCodeButton ()
     {
-         clickButton(ClickToHaveGiftCard);
+
+        clickButton(ClickToHaveGiftCard);
     }
 
     public  void  EnterInvalidPromoCode (String PromoCode)

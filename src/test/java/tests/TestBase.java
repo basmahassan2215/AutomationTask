@@ -1,6 +1,6 @@
 package tests;
-
 import java.util.HashMap;
+import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -79,7 +79,11 @@ public class TestBase extends AbstractTestNGCucumberTests
 	}
 
 	// take screenshot when test case fail and add it in the Screenshot folder
-	@AfterMethod
+	@AfterMethod ()
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Take screenshot when test fails")
+	@Link(name = "Jira " , url = "Google.com") // just example
+	@Epic("JIRA-122")  // just example
 	public void screenshotOnFailure(ITestResult result) 
 	{
 		if (result.getStatus() == ITestResult.FAILURE)

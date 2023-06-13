@@ -20,7 +20,7 @@ public class SubscriptionPackagesPage extends PageBase {
 	@FindBy(xpath = "//*[@id= \"kw\"]")
 	public WebElement SelectKuwait;
 
-	@FindBy(xpath = "//*[@id= \"bh\"]")
+	@FindBy(xpath = "//*[@id=\"bh-contry-lable\"]")
 	public WebElement SelectBahrain;
 
 
