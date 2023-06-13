@@ -15,6 +15,8 @@ public class SignInSteps extends TestBase {
         TranslationAndHaveGiftCardPage TranslationAndGiftCardObj ;
         LogInWithInvalidUserPage LoginObj ;
 
+        {}
+
         @When("^The User click on Translation button$")
         public void theUserClickOnTranslationButton() {
                 PageBaseObj = new PageBase(driver);

@@ -26,15 +26,15 @@ public class LogInWithInvalidUserPage  extends PageBase{
 
     // Action class to click on Signin button
     public  void  SignIn () {
-    clickButton(SignIn);
-}
+        clickButton(SignIn);
+    }
 
 
- // Action class to sign in with invalid username
-  public  void  EnterInvalidUser ( String InvalidUser)
-  {
-    setTextElementText(UserNameInput ,InvalidUser);
-    clickButton(SignInButton);
-  }
+    // Action class to sign in with invalid username
+    public  void  EnterInvalidUser ( String InvalidUser)
+    {
+        setTextElementText(UserNameInput ,InvalidUser);
+        clickButton(SignInButton);
+    }
 
 }
