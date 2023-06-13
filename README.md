@@ -57,139 +57,15 @@ Fourth scenario :-   Ender invalid username while the user logging in and expect
  
  
  
-i coverd another scenario but there is an issue while ruuning it , so i will put the code here 
-
-Feature file 
-
-Feature: : Redeeming gift with invalid promo code
-Ender invalid promo code and expect to get error message with Arabic language
+i coverd another scenario but there is an issue while ruuning it , so i commented the code 
+Feature file -- >  VoucherCodeRedeeming.feature. 
 
 
-	Scenario Outline: redeeming gift with invalid promo code
-
-	 Given  The user navigate to STC.tv homepage
- 	When    The User click on Translation button
-	And     The user Scroll down till finding the HaveGiftButton
-	And     The User Click to have gift code
-	And     The User enter Invalid code "<promoCode>"
- Then    The User validate that there is error message shall be displayed */
-
- 	Examples:
-		| promoCode |
-     	|  100      |
-    
-   
-   Page 
-   
-   
-   package pages;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
-public class TranslationAndHaveGiftCardPage extends  PageBase{
-    public TranslationAndHaveGiftCardPage(WebDriver driver) {
-        super(driver);
-    }
-
-    @FindBy(id = "translation-btn")
-    public WebElement TranslationButton;
-
-    @FindBy (xpath = "//*[contains(text(),'اضغط هنا')]")
-    public WebElement ClickToHaveGiftCard ;
-
-    @FindBy (xpath = "//input[@type=\"text\"]")
-    public  WebElement TextInputForPromoCode ;
-
-
-    @FindBy(xpath = "//button[@type=\"submit\"]")
-    public  WebElement RedeemButton ;
-
-    @FindBy (xpath = "//*[@class=\"error-msg\"]")
-    public  WebElement ErrorMessage ;
-
-
-    public  void  ClickOnTranslationButton ()
-    {
-        clickButton(TranslationButton);
-    }
-
-    public void HaveGiftCodeButton ()
-    {
-
-        clickButton(ClickToHaveGiftCard);
-    }
-
-    public  void  EnterInvalidPromoCode (String PromoCode)
-    {
-        setTextElementText(TextInputForPromoCode ,PromoCode);
-        clickButton(RedeemButton);
-    }
-
-}
-
- 
-
-Steps :- 
-
-package steps;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import org.openqa.selenium.JavascriptExecutor;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import pages.PageBase;
-import pages.TranslationAndHaveGiftCardPage;
-import tests.TestBase;
-
-public class redeemGiftWithInvalidCodeSteps extends TestBase {
+also there are regression suite in regressionSuite.xml & testng.xml
 
 
 
-	PageBase PageBaseObj;
-	TranslationAndHaveGiftCardPage TranslationAndGiftCardObj ;
 
-
-	@When("^The User click on Translation button$")
-	public void theUserClickOnTranslationButton() {
-		TranslationAndGiftCardObj = new TranslationAndHaveGiftCardPage(driver);
-		TranslationAndGiftCardObj.ClickOnTranslationButton();
-	}
-
-
-	@Test (enabled = false)
-	@And("^The user Scroll down till finding the HaveGiftButton$")
-	public void theUserScrollDownTillFindingTheHaveGiftButton() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,2000)", "");
-	}
-
-	@Test(enabled = false)
-	@And("^The User Click to have gift code$")
-	public void theUserClickToHaveGiftCode() {
-		TranslationAndGiftCardObj = new TranslationAndHaveGiftCardPage(driver);
-		this.TranslationAndGiftCardObj.HaveGiftCodeButton();
-	}
-
-	@Test (enabled = false)
-	@And("^The User enter Invalid code \"([^\"]*)\"$")
-	public void theUserEnterInvalidCode(String PromoCode) {
-		PageBaseObj = new PageBase(driver);
-		TranslationAndGiftCardObj = new TranslationAndHaveGiftCardPage(driver);
-		TranslationAndGiftCardObj.EnterInvalidPromoCode(PromoCode);
-	}
-
-	@Test(enabled = false)
-	@Then("^The User validate that there is error message shall be displayed$")
-	public void theUserValidateThatThereIsErrorMessageShallBeDisplayed() {
-
-		TranslationAndGiftCardObj = new TranslationAndHaveGiftCardPage(driver);
-		Assert.assertTrue(TranslationAndGiftCardObj.ErrorMessage.getText().contains("القسيمة أو كود الخصم غير صالح للاستخدام"));
-		System.out.println(TranslationAndGiftCardObj.ErrorMessage.getText());
-	}
-
-}
 
 
 
