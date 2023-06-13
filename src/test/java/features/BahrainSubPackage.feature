@@ -1,4 +1,4 @@
-Feature: Subscription Packages
+Feature: Subscription Packages for Bahrain
   Validate the Subscription Packages – Type & Price and Currency for Bahrain
 
   Scenario: Validate the Subscription packages

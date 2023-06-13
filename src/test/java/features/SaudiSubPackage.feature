@@ -1,4 +1,4 @@
-Feature: Subscription Packages
+Feature: Subscription Packages for KS
   Validate the Subscription Packages – Type & Price and Currency for KSA
 
   Scenario: Validate the Subscription packages

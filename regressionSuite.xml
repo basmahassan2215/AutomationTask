@@ -4,7 +4,9 @@
 	<test name="Regression Test" preserve-order="false">
 		<classes>
 			<class name="steps.subscriptionPackagesSteps" />
-			<class name="steps.RedeemGiftWithInvalidCodeSteps" />
+			<class name="steps.redeemGiftWithInvalidCodeSteps" />
+			<class name="steps.SignInSteps" />
+
 
 		</classes>
 	</test>

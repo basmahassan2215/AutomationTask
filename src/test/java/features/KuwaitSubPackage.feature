@@ -1,4 +1,4 @@
-Feature: Subscription Packages
+Feature: Subscription Packages for Kuwait
   Validate the Subscription Packages – Type & Price and Currency for Kuwait
 
   Scenario: Validate the Subscription packages
