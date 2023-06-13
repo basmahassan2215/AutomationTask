@@ -24,9 +24,9 @@ public class RedeemGiftWithInvalidCodeSteps extends TestBase {
 
     @And("^The User Click to have gift code$")
     public void theUserClickToHaveGiftCode() {
-        TranslationAndGiftCardObj = new TranslationAndHaveGiftCardPage(driver);
+        //TranslationAndGiftCardObj = new TranslationAndHaveGiftCardPage(driver);
         // JavascriptExecutor js = (JavascriptExecutor) driver;
-        //js.executeScript("window.scrollBy(0,10)", "");
+        //js.executeScript("window.scrollBy(0,2000)", "");
         TranslationAndGiftCardObj.ToHaveGiftCode();
     }
 

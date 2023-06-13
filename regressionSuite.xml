@@ -3,11 +3,9 @@
 	<parameter name="browser" value="chrome" />
 	<test name="Regression Test" preserve-order="false">
 		<classes>
-			<class name="tests.ContactUsTest" />
-			<class name="tests.UserRegistrationTest" />
-			<class name="tests.ProductHoverMenuTest" />
-			<class name="tests.SearchProductTest" />
-			<class name="tests.AddProductToShoppingCartTest" />
+			<class name="steps.subscriptionPackagesSteps" />
+			<class name="steps.RedeemGiftWithInvalidCodeSteps" />
+
 		</classes>
 	</test>
 </suite> 
