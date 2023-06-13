@@ -18,8 +18,8 @@ Fourth scenario :-   Ender invalid username while the user logging in and expect
   However this report will get the results of the tests in TestBase as its dependencies releated to Allure TestNG not Cucumber 
   as i prefere to run the feature files through Cucumber report 
   
-  to run allure report for cucumber 
-  add there in POM file 
+  To run the allure report for cucumber 
+  -- add these in the POM.xml file 
    
   <dependencies>
     <dependency>
@@ -55,18 +55,8 @@ Fourth scenario :-   Ender invalid username while the user logging in and expect
  
  
  
- 
- 
 i coverd another scenario but there is an issue while ruuning it , so i commented the code 
 Feature file -- >  VoucherCodeRedeeming.feature. 
 
 
 also there are regression suite in regressionSuite.xml & testng.xml
-
-
-
-
-
-
-
-
