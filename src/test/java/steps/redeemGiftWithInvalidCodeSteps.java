@@ -1,5 +1,4 @@
- package steps;
-/*
+package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -12,10 +11,12 @@ import tests.TestBase;
 
 public class redeemGiftWithInvalidCodeSteps extends TestBase {
 
+
+
     PageBase PageBaseObj;
     TranslationAndHaveGiftCardPage TranslationAndGiftCardObj ;
 
-
+ /*
     @When("^The User click on Translation button$")
     public void theUserClickOnTranslationButton() {
         TranslationAndGiftCardObj = new TranslationAndHaveGiftCardPage(driver);
@@ -53,5 +54,5 @@ public class redeemGiftWithInvalidCodeSteps extends TestBase {
         Assert.assertTrue(TranslationAndGiftCardObj.ErrorMessage.getText().contains("القسيمة أو كود الخصم غير صالح للاستخدام"));
         System.out.println(TranslationAndGiftCardObj.ErrorMessage.getText());
     }
- }
-*/
+ */
+}
